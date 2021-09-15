@@ -64,7 +64,7 @@ $(function () {
             function (res) {
                 console.log(res);
                 if (res.status !== 0) {
-                    return  layer.msg('注册失败');
+                    return layer.msg('注册失败');
                 }
                 layer.msg('注册成功,请登录');
                 $('#link_reg').click();
@@ -72,23 +72,27 @@ $(function () {
     })
 
     // 监听表单登录事件
-    $("#form_login").on('submit',function(e){
+    $("#form_login").on('submit', function (e) {
         e.preventDefault();
         var data = {
-            username:$('#form_login [name=user_name]').val(),
-            password:$('#form_login [name=user_pwd]').val(),
+            username: $('#form_login [name=user_name]').val(),
+            password: $('#form_login [name=user_pwd]').val(),
         }
         $.ajax({
             url: '/api/login',
-            type:'POST',           
-            data:data,
-            success:function(res){
-                if(res.status==1){
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if (res.status == 1) {
                     return layer.msg('登录失败')
                 }
                 window.location.href = './index.html'
+
+                window.localStorage.setItem("token", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzA5MTgsInVzZXJuYW1lIjoiYnlsIiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2MzE2OTIyNDYsImV4cCI6MTYzMTcyODI0Nn0.r68vxbYkwR4jVRNV_ZHM-KdJNkaxIu7H4lzmcUjRys4")
+
+
                 return layer.msg('登录成功')
-                
+
             }
         })
     })

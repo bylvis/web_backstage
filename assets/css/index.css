@@ -1,0 +1,36 @@
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.layui-body{
+    overflow: hidden;
+}
+a{
+    translate: none;
+}
+.user_info{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    
+}
+#welcome{
+    color: #fff;
+}
+.layui-nav-tree .user_info{
+    border-bottom: 1px solid black;
+}
+.layui-nav-img{
+    width: 40px;
+    height: 40px;
+}
+.text_avatar{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius :40px;
+    background-color: green;
+    color: #fff;
+    margin-right: 4px;
+}
