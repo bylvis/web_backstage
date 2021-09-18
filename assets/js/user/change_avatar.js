@@ -76,6 +76,7 @@ $(function () {
                     return layui.layer.msg('获取用户信息失败！')
                 }
                 console.log(res);
+                layui.layer.msg('获取用户信息成功！')
                 // parent.$('#welcome').html('欢迎  ' + res.data.nickname);
                 parent.$('.layui-nav-img').attr('src', res.data.user_pic).show();
             }
