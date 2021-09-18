@@ -1,6 +1,6 @@
 $(function () {
     // 点击A标签本身，并不会触发跳转到指定链接的事件，我们平时都是点击的A标签中的文字了   
-    $('#alink')[0].click()
+    
     getUserInfo()
     // 退出事件
     $('#exit').on('click', function () {
@@ -10,7 +10,7 @@ $(function () {
             localStorage.removeItem('token')
             layer.close(index);
         });
-
+       
     })
 
     //发送请求
@@ -47,6 +47,7 @@ $(function () {
         console.log(name);
         // 设置欢迎
         $('#welcome').html('欢迎 ' + name)
+       
         // 按需设置用户头像
         if (user.user_pic != null) {
             //渲染图片头像
@@ -60,4 +61,6 @@ $(function () {
             $('.text_avatar').html(first).show();
         }
     }
+
+  
 })

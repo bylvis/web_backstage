@@ -88,7 +88,7 @@ $(function () {
                 }
                 window.location.href = './index.html'
 
-                window.localStorage.setItem("token", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzA5MTgsInVzZXJuYW1lIjoiYnlsIiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2MzE2OTIyNDYsImV4cCI6MTYzMTcyODI0Nn0.r68vxbYkwR4jVRNV_ZHM-KdJNkaxIu7H4lzmcUjRys4")
+                window.localStorage.setItem("token", res.token)
 
 
                 return layer.msg('登录成功')

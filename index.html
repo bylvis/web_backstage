@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>layout 管理系统 </title>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
   <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
   <link rel="stylesheet" href="./assets/fonts/iconfont.css">
   <link rel="stylesheet" href="./assets/css/index.css">
@@ -34,8 +34,9 @@
           </a>
 
           <dl class="layui-nav-child">
-            <dd><a href="">更换头像</a></dd>
-            <dd><a href="">设置</a></dd>
+            <dd><a href="./user/change_avatar.html" target="fm">更换头像</a></dd>
+            <dd><a href="./user/user_info.html" target="fm">用户资料</a></dd>
+            <dd><a href="./user/change_pwd.html" target="fm">修改密码</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
@@ -83,9 +84,9 @@
           <li class="layui-nav-item">
             <a href="javascript:;"><span class="iconfont icon-user"></span>&nbsp;&nbsp;&nbsp;个人中心</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;基本资料</a></dd>
-              <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;更换头像</a></dd>
-              <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;重置密码</a></dd>
+              <dd><a href="./user/user_info.html" target="fm"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;基本资料</a></dd>
+              <dd><a href="./user/change_avatar.html" target="fm"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;更换头像</a></dd>
+              <dd><a href="./user/change_pwd.html" target="fm"><i class="layui-icon layui-icon-app"></i>&nbsp;&nbsp;&nbsp;重置密码</a></dd>
             </dl>
           </li>
         </ul>
@@ -102,7 +103,7 @@
       底部固定区域
     </div>
   </div>
-
+  <script>$('#alink')[0].click()</script>
   <script src="./assets/lib/layui/layui.all.js"></script>
 
 
