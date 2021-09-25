@@ -26,7 +26,6 @@ $(function () {
                 if (res.status !== 0) {
                     return layui.layer.msg('获取用户信息失败！')
                 }
-                console.log(res);
                 renderAvator(res.data);
             },
             //无论成功或者失败都会调用
@@ -44,7 +43,6 @@ $(function () {
     function renderAvator(user) {
         //获取用户名字
         var name = user.nickname || user.username;
-        console.log(name);
         // 设置欢迎
         $('#welcome').html('欢迎 ' + name)
        

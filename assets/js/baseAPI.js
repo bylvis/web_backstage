@@ -1,8 +1,5 @@
 $.ajaxPrefilter(function (option) {
-    console.log(option.url);
     option.url = 'http://api-breakingnews-web.itheima.net' + option.url
-    console.log(option.url);
-    
     // 如果请求中有/my/字段 就给钥匙
     if (option.url.indexOf('/my/' !== -1)) {
         option.headers = {
@@ -11,7 +8,6 @@ $.ajaxPrefilter(function (option) {
         }
     }
     option.complete = function(res){
-            console.log('执行complete',res);
             if(res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败！'){
 
                 window.location.href = './login.html'
